@@ -25,7 +25,7 @@ function ejecutarPruebas() {
   }
 
   // Test 3 - suma (🔥 lo que te pidieron)
-  const resultadoSuma = sumar(2, 3);
+  const resultadoSuma = sumar(6, 3);
   if (resultadoSuma === 5) {
     console.log("test 3 pasado: suma correcta");
     pasadas += 3; // suma 3 buenas
