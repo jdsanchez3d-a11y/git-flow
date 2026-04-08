@@ -4,7 +4,7 @@ function ejecutarPruebas() {
   let pasadas = 0;
   let fallidas = 0;
 
-  // Test 1 - saludar
+  
   const r1 = saludar("rider");
   if (r1.includes("rider")) {
     console.log("test 1 pasado: funcion saludar correcta");
@@ -14,7 +14,7 @@ function ejecutarPruebas() {
     fallidas++;
   }
 
-  // Test 2 - estadoSistema
+  
   const actualEstado = estadoSistema();
   if (actualEstado.estado === "activo") {
     console.log("test 2 pasado: estadoSistema correcto");
@@ -24,8 +24,8 @@ function ejecutarPruebas() {
     fallidas++;
   }
 
-  // Test 3 - suma (🔥 lo que te pidieron)
-  const resultadoSuma = sumar(6, 3);
+  
+  const resultadoSuma = sumar(2, 3);
   if (resultadoSuma === 5) {
     console.log("test 3 pasado: suma correcta");
     pasadas += 3; // suma 3 buenas
