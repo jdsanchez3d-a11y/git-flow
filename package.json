@@ -1,0 +1,10 @@
+{
+"name":"flowCodeRider",
+"version": "1.0.0",
+"type": "module",
+"descripcion": "primera aplicacion de jesusSanchez flow",
+"scripts": {
+"start": "node src/app.js",
+"test": "node test/app.test.js"
+}
+}

@@ -22,5 +22,5 @@ fallidas++;
 console.log ("\nResultados: " + pasado + "pasado, ", + fallidas + "fallidas");
 if (fallidas>0) process.exit(1);
 }
-} 
-ejecutarPruebas();
+}
+holafdtafdqyfdfa
