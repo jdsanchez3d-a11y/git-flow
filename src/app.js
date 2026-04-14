@@ -8,12 +8,15 @@ export function despedir(nombre) {
 
 export function estadoSistema() {
   return {
-    estado: "activo",
+    Estado: "activo",
     version: "1.0.0",
-    message: "Sistema chucho funcionando correctamente"
+    Message: "Sistema chucho funcionando correctamente"
   };
 }
 
 export function sumar(a, b) {
   return a + b;
+}
+export function resta(q, g) {
+  return q-g;
 }
