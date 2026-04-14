@@ -8,9 +8,9 @@ export function despedir(nombre) {
 
 export function estadoSistema() {
   return {
-    Estado: "activo",
+    estado: "activo",
     version: "1.0.0",
-    Message: "Sistema chucho funcionando correctamente"
+    message: "Sistema chucho funcionando correctamente"
   };
 }
 
@@ -19,4 +19,13 @@ export function sumar(a, b) {
 }
 export function resta(q, g) {
   return q-g;
+}
+
+export function healthCheck() {
+  return {
+    status: "ok",
+    timestamp: new Date().toISOString(),
+    servicio: "StreamFlow API",
+    version: "1.0.0"
+  };
 }
