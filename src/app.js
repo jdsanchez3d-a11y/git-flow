@@ -8,9 +8,9 @@ export function despedir(nombre) {
 
 export function estadoSistema() {
   return {
-    Estado: "activo",
+    estado: "activo",
     version: "1.0.0",
-    Message: "Sistema chucho funcionando correctamente"
+    message: "Sistema chucho funcionando correctamente"
   };
 }
 
