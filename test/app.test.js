@@ -34,6 +34,18 @@ function ejecutarPruebas() {
     fallidas += 1; // suma 1 mala
   }
 
+   const health = healthCheck();
+
+if (health.status === "ok") {
+  console.log("test healthCheck pasado");
+
+} else {
+  console.log("test healthCheck fallidas", health);
+  fallidas++;
+}
+
+  
+
   // Resultados
   console.log("\nResultados: " + pasadas + " pasadas, " + fallidas + " fallidas");
 
