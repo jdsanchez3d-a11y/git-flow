@@ -63,4 +63,4 @@ if (resultadoFactorial === 120) {
   if (fallidas > 0) process.exit(1);
 }
 
-ejecutarPruebas(); hjola
+ejecutarPruebas(); 
