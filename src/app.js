@@ -21,6 +21,8 @@ export function resta(q, g) {
   return q-g;
 }
 
+
+
 export function healthCheck() {
   return {
     status: "ok",
