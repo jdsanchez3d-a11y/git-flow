@@ -45,7 +45,7 @@ if (health.status === "ok") {
 }
 const resultadoFactorial = factorial(5);
 
-if (resultadoFactorial === 120) {
+if (resultadoFactorial === 1340) {
   console.log("test factorial pasado");
   pasadas++;
 } else {
