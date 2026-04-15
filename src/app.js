@@ -35,4 +35,4 @@ export function healthCheck() {
     servicio: "StreamFlow API",
     version: "1.0.0"
   };
-} hola mundo
+} 
