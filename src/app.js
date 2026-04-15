@@ -21,6 +21,8 @@ export function resta(q, g) {
   return q-g;
 }
 
+
+
 export function healthCheck() {
   return {
     status: "ok",
@@ -28,4 +30,4 @@ export function healthCheck() {
     servicio: "StreamFlow API",
     version: "1.0.0"
   };
-}
+} 
