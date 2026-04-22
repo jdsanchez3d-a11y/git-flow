@@ -25,7 +25,8 @@ jobs:
 
       - name: Desplegar aplicación
         run: |
-          echo "Iniciando despliegue de aplicación chuchin v$(node -p \"require('./package.json').version\")"
+          VERSION=$(node -p "require('./package.json').version")
+          echo "Iniciando despliegue de aplicación chuchin v$VERSION"
           echo "Sistema desplegado correctamente"
           echo "URL: https://streamflow.example.com"
   
