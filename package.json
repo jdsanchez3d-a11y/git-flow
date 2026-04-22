@@ -5,6 +5,7 @@
 "descripcion": "primera aplicacion de jesusSanchez flow",
 "scripts": {
 "start": "node src/app.js",
-"test": "node test/app.test.js"
+"test": "node test/app.test.js",
+"build": "echo 'paso omitir para produccion'"
 }
 }
