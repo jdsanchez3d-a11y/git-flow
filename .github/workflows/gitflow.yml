@@ -1,0 +1,49 @@
+name: GitFlow Automation
+
+on:
+  push:
+    branches:
+      - develop
+      - feature/**
+      - release/**
+      - hotfix/**
+
+jobs:
+  validar-rama:
+    name: Validar nombre de rama
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar rama actual
+        run: echo "Rama actual: $GITHUB_REF"
+
+      - name: Validar convención Git Flow
+        run: |
+          if [[ "$GITHUB_REF" =~ ^refs/heads/(feature|release|hotfix)/.+ ]]; then
+            echo "Rama válida según Git Flow"
+          elif [[ "$GITHUB_REF" == "refs/heads/develop" ]]; then
+            echo "Rama develop válida"
+          else
+            echo "❌ Rama no válida para Git Flow"
+            exit 1
+          fi
+
+  test:
+    name: Ejecutar pruebas
+    runs-on: ubuntu-latest
+    needs: validar-rama
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar tests
+        run: npm test
