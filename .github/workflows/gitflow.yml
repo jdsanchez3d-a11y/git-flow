@@ -24,11 +24,11 @@ jobs:
           elif [[ "$GITHUB_REF" == "refs/heads/develop" ]]; then
             echo "Rama develop válida"
           else
-            echo "❌ Rama no válida para Git Flow"
+            echo "Rama no válida para Git Flow"
             exit 1
           fi
 
-  test:
+  test:   # 👈 ESTE debe estar al mismo nivel que "validar-rama"
     name: Ejecutar pruebas
     runs-on: ubuntu-latest
     needs: validar-rama
