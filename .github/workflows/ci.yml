@@ -31,5 +31,4 @@ jobs:
         run: npm test
 
       - name: Verificar sintaxis del código
-        run: node --check src/app.js
-        
+        run: node test/app.test.js
