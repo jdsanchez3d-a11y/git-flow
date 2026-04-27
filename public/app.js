@@ -17,7 +17,7 @@ function verificarSistema(){
     statusDiv.textContent = `${resultado.messege} | ${resultado.timestamp}`;
     statusDiv.style.color = "#009B4C"
 }
-Document.addEventiListener("DOMContentLoaded"), () => {
+Document.addEventiListener("DOMContentLoaded", () => {
     document.getElementById("version").textContent=`v${VERSION}`;
     verificarSistema();
-}
+});
