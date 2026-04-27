@@ -35,4 +35,5 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Show deployment URL
-        run: echo "Sitio en producción: ${{ steps.deployment.outputs.page_url }}"
+        run: |
+          echo "Sitio en producción: ${{ steps.deployment.outputs.page_url }}"
