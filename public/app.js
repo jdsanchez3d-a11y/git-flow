@@ -1,23 +1,29 @@
-const VERSION= "1.2.0";
+const VERSION = "1.2.0";
 
-function saludar (nombre) {
-    return "hola ${nombre}, bienvenidos a chuchin.app";
+function saludar(nombre){
+    return `hola ${nombre}, bienvenidos a chuchin.app`;
 }
-function healtCheck(){
-    return{
-        status: "ok",
-        version:VERSION,
-        timestamp: new Data().toISOString(),
-        messege: "Sistema chuchin funciona correctamente"
+
+function healthCheck(){
+    return {
+        status:"ok",
+        version: VERSION,
+        timestamp: new Date().toISOString(),
+        message:"Sistema chuchin funciona correctamente"
     };
 }
+
 function verificarSistema(){
-    const resultado = healtCheck();
+    const resultado = healthCheck();
     const statusDiv = document.getElementById("status");
-    statusDiv.textContent = `${resultado.messege} | ${resultado.timestamp}`;
-    statusDiv.style.color = "#009B4C"
+
+    statusDiv.textContent =
+      `${resultado.message} | ${resultado.timestamp}`;
+
+    statusDiv.style.color = "#009B4C";
 }
-Document.addEventiListener("DOMContentLoaded", () => {
+
+document.addEventListener("DOMContentLoaded", ()=> {
     document.getElementById("version").textContent=`v${VERSION}`;
     verificarSistema();
 });
